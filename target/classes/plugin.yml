@@ -1,0 +1,4 @@
+name: LoginLogger
+version: 1.0
+main: org.logintracker.loginlogger.MyPlugin
+api-version: 1.21
