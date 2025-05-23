@@ -16,6 +16,12 @@ public class MyPlugin extends JavaPlugin {
         startTime = System.currentTimeMillis();
 
         getLogger().info("=======================================");
+        getLogger().info(" _                _       _                                ");
+        getLogger().info("| |    ___   __ _(_)_ __ | |    ___   __ _  __ _  ___ _ __ ");
+        getLogger().info("| |   / _ \\ / _` | | '_ \\| |   / _ \\ / _` |/ _` |/ _ \\ '__|");
+        getLogger().info("| |__| (_) | (_| | | | | | |__| (_) | (_| | (_| |  __/ |   ");
+        getLogger().info("|_____\\___/ \\__, |_|_| |_|_____|___/ \\__, |\\__, |\\___|_|   ");
+        getLogger().info("            |___/                    |___/ |___/           ");
         getLogger().info("LoginLogger wurde erfolgreich aktiviert!");
         getLogger().info("Alle Login/Logout-Events werden geloggt.");
         getLogger().info("Log-Datei: plugins/LoginLogger/logs.txt");
@@ -33,6 +39,7 @@ public class MyPlugin extends JavaPlugin {
 
         writeLog("Server wurde gestartet.");
         getServer().getPluginManager().registerEvents(new PlayerSessionTracker(this), this);
+        getServer().getPluginManager().registerEvents(new CommandsLogger(this), this);
     }
 
     @Override
